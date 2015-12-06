@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reslider Plugin - Bootstrap</title>
+	
+	<!-- Common meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<!-- CSS files related to bootstrap framework -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
+	
+	<!-- CSS file related to reslider -->
+	<link rel="stylesheet" type="text/css" href="css/reslider.css">
+	
+	<!-- JQuery JavaScript Library -->
+	<script src="js/jquery-2.1.4.js"></script>
+	
+	<!-- Bootstrap JavaScript library -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- reslider JavaScript Plugin -->
+	<script src="js/reslider.min.js"></script>
+	
+	<!-- Initializes reslider in the web page -->
+	<script>
+		$(window).load(function(){
+			$('#reslider').reslider({
+				duration: 9000,
+				textColor: "#fff",
+				textBgColor: "rgba(0, 0, 0, 0.4)"
+			});
+
+			setParentHeight();
+		});
+
+		$(window).resize(function(){
+			setParentHeight();
+		});
+		
+		function setParentHeight(){
+			var currentSlideHieght;
+			var slides = $('#reslider').children();
+				
+			for(x = 0; x < slides.length; x++){
+
+				if(slides[x].style.display == 'list-item'){
+					var currentSlideHieght = $(slides[x]).height();
+				}
+			}
+				
+			slides.parent().height(currentSlideHieght);
+		}
+	</script>
+</head>
+<body>
+	<div id="slider-wrapper">
+		<div class="row">
+			<div class="xs-col-12 sm-col-12 md-col-12 lg-col-12">
+				<ul id="sld-division">
+					<li>
+						<p>Lorem Ipsum</p>
+						<p class="s-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+					</li>
+					<li>
+						<p>Lorem Ipsum</p>
+						<p class="s-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+					</li>
+					<li>
+						<p>Lorem Ipsum</p>
+						<p class="s-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+					</li>
+				</ul>
+				<ul id="reslider" class="reslider-wrapper">
+					<li id="sld-one">
+						<img src="images/1.jpg" class="res-img">
+						<div class="sld-header">
+							<p class="sld-title">Lorem Ipsum Is Simply Dummy Text</p>
+							<p class="sld-desc hidden-xs hidden-sm">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut<br/>
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris<br/>
+								nisi ut aliquip ex ea commodo consequat.
+							</p>
+							<button class="sld-button">Read More</button>
+						</div>
+					</li>
+					<li id="sld-two">
+						<img src="images/2.jpg" class="res-img">
+						<div class="sld-header">
+							<p class="sld-title">Lorem Ipsum Is Simply Dummy Text</p>
+							<p class="sld-desc hidden-xs hidden-sm">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut<br/>
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris<br/>
+								nisi ut aliquip ex ea commodo consequat.
+							</p>
+							<button class="sld-button">Read More</button>
+						</div>
+					</li>
+					<li id="sld-three">
+						<img src="images/3.jpg" class="res-img">
+						<div class="sld-header">
+							<p class="sld-title">Lorem Ipsum Is Simply Dummy Text</p>
+							<p class="sld-desc hidden-xs hidden-sm">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut<br/>
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris<br/>
+								nisi ut aliquip ex ea commodo consequat.
+							</p>
+							<button class="sld-button">Read More</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
