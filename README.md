@@ -1,4 +1,4 @@
-# reslider
+# Reslider
 
 Reslider v0.1.0
 
