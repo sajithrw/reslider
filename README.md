@@ -6,6 +6,6 @@ A responsive image slider with bootstrap front end framework, has optimized for 
 
 Author: TMSGR Warnasooriya
 
-Released under GNU GENERAL PUBLIC LICENSE Version 2, June 1991
+Released under MIT License
 
 Date: 2015-12-06 5:36 AM (GMT Time)
